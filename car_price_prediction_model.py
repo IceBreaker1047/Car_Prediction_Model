@@ -75,7 +75,10 @@ J_hist,w_final,b_final = gradient_descent(X_norm,y_train,initial_w,initial_b,com
 
 print(f"The value of w found is : {w_final} and the value of b foudn is {b_final}")
 
-x = X_norm[2]
-predict = np.dot(w_final,x)+b_final
+#This is to check the model accuracy
+while True:
+    a = int(input("Enter the row number: "))
+    x = X_norm[a]
+    predict = np.dot(w_final,x)+b_final
 
-print(predict)
+    print(predict)
